@@ -1,19 +1,13 @@
-const Intern = require("../lib/Intern");
+const Intern = require("../lib/Intern.js");
 
-test("This is the test for the school", () => {
-    const testValue = "IVC";
-    const e = new Intern("tru", 1, "example@test.com", testValue);
-    expect(e.school).toBe(testValue);
-});
+test('This is the test for the school', () => {
+    let testSchool = "IVC";
+    let a = new Intern(null, null, null, "IVC")
+    expect(a.getSchool()).toBe(testSchool)
+})
 
-test("getRole() should return \"Intern\"", () => {
-    const testValue = "Intern";
-    const e = new Intern("tru", 1, "example@test.com", "IVC");
-    expect(e.getRole()).toBe(testValue);
-});
-
-test("This can get the school via getSchool()", () => {
-    const testValue = "IVC";
-    const e = new Intern("tru", 1, "example@test.com", testValue);
-    expect(e.getSchool()).toBe(testValue);
-});
+test('This is the test for the role', () => {
+    let testRole = "Intern";
+    let a = new Intern(null, null, null)
+    expect(a.getRole()).toBe(testRole)
+})

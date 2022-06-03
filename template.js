@@ -10,12 +10,30 @@ const generateTeam = (team) => {
 	            <ul class="list-group">
 	                <li class="list-group-item">ID: ${manager.getId()}</li>
 	                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-	                <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
+	                <li class="list-group-item">Office number: ${manager.getOffice()}</li>
 	            </ul>
 	        </div>
 	    </div>
         `;
     };
+
+    const generateEngineer = (engineer) => {
+        return `
+        <div class="card employee-card">
+        <div class="card-header">
+        <h2 class="card-title">${engineer.getName()}</h2>
+        <h3 class="card-title"<i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+        </div>
+        <div class="body">
+        <ul class="list-group">
+        <li class="list-group-item">ID: ${engineer.getId()}</li>
+        <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+        <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="nothing">${engineer.getGithub()}</a></li>
+        </ul>
+        </div>
+        </div>
+        `;
+    }
 
     const generateIntern = (intern) => {
         return `
@@ -36,7 +54,6 @@ const generateTeam = (team) => {
     };
 
     const html = [];
-
     html.push (
         team
         .filter((employee) => employee.getRole() === "Manager")

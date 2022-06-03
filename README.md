@@ -6,6 +6,9 @@ This team profile generator uses index.js to ask a serious of questions for the 
 ## Example of Team Profile Generator
 [image goes here]
 
+## Link to walk through Video
+https://www.youtube.com/watch?v=pZpRn81pR2g
+
 ## Programs Used
 1. Javascript
 2. CSS

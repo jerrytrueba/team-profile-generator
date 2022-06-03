@@ -8,6 +8,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateTeam = require("./template.js");
 
+const newStaffMemberData = [];
+
 //Questions being asked//
 const questions = async () => {
     const answers = await inquirer
@@ -31,7 +33,7 @@ const questions = async () => {
             type: "list",
             message: "What is your role?",
             name: "role",
-            choices: ["Manager, Engineer, Intern"],
+            choices: ["Manager", "Engineer", "Intern"],
         },
     ])
 
@@ -95,7 +97,7 @@ async function promptQuestions() {
             name:'addMember',
             type: 'list',
             choices:['Add a new member', 'Create team'],
-            message: "what would you like to do next?"
+            message: "What would you like to do next?"
         }
     ])
     if(addMemberAns.addMember === 'Add a new member') {
